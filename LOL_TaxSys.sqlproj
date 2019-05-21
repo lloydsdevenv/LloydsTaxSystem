@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>LOL_TaxSys</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{1c79ae0c-cf80-433c-8677-bc18c77a8f0f}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>LOL_TaxSys</RootNamespace>
+    <AssemblyName>LOL_TaxSys</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="ETL\" />
+    <Folder Include="ETL\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="ETL\Stored Procedures\" />
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\AGG_ILLINOISE_KENTUCKY.sql" />
+    <Build Include="dbo\Tables\AGG_INC_RITC_ILLINOIS_INCOME.sql" />
+    <Build Include="dbo\Tables\AGG_INC_RITC_KENTUCKY_JATF.sql" />
+    <Build Include="dbo\Tables\AGG_INC_RITC_KENTUCKY_TRUST.sql" />
+    <Build Include="dbo\Tables\AGG_INC_RITC_QMA.sql" />
+    <Build Include="dbo\Tables\AGG_INC_RITC_SIS.sql" />
+    <Build Include="dbo\Tables\AGG_MEMBER_BMR.sql" />
+    <Build Include="dbo\Tables\AGG_MEMBER_BMR_HIST.sql" />
+    <Build Include="dbo\Tables\AGG_MEMBER_EXP.sql" />
+    <Build Include="dbo\Tables\AGG_QMA_1042.sql" />
+    <Build Include="dbo\Tables\AGG_SYNDICATE_MEMBER_BMR.sql" />
+    <Build Include="dbo\Tables\AGG_SYNDICATE_MEMBER_BMR_HIST.sql" />
+    <Build Include="dbo\Tables\AGG_SYNDICATE_MEMBER_EXP.sql" />
+    <Build Include="dbo\Tables\AGG_UNDER_WRITE_PROFIT_LOSS.sql" />
+    <Build Include="dbo\Tables\ANALYSIS_1042.sql" />
+    <Build Include="dbo\Tables\ANALYSIS_1042_HIST.sql" />
+    <Build Include="dbo\Tables\BASE_ELEMENT_NID.sql" />
+    <Build Include="dbo\Tables\BEN_INC_EXP_CODE_MAPPER.sql" />
+    <Build Include="dbo\Tables\CORE_MARKET_RETURNS_QMA.sql" />
+    <Build Include="dbo\Tables\CORE_MARKET_RETURNS_QMA_HIST.sql" />
+    <Build Include="dbo\Tables\CORE_MARKET_RETURNS_SIS.sql" />
+    <Build Include="dbo\Tables\CORE_MARKET_RETURNS_SIS_HIST.sql" />
+    <Build Include="dbo\Tables\COUNTRY.sql" />
+    <Build Include="dbo\Tables\CURRENCY.sql" />
+    <Build Include="dbo\Tables\CURRENCY_RATE.sql" />
+    <Build Include="dbo\Tables\DISTRIBUTION.sql" />
+    <Build Include="dbo\Tables\DISTRIBUTION_HIST.sql" />
+    <Build Include="dbo\Tables\DISTRIBUTION_MAPPER.sql" />
+    <Build Include="dbo\Tables\EDF.sql" />
+    <Build Include="dbo\Tables\EDF_HIST.sql" />
+    <Build Include="dbo\Tables\EDF_MAPPER.sql" />
+    <Build Include="dbo\Tables\ELECTORIAL_STATUS.sql" />
+    <Build Include="dbo\Tables\ENTITY_TYPE.sql" />
+    <Build Include="dbo\Tables\ILL_KEN_TREATY_NONTREATY_PER.sql" />
+    <Build Include="dbo\Tables\ILLINOIS_INCOME.sql" />
+    <Build Include="dbo\Tables\ILLINOIS_INCOME_HIST.sql" />
+    <Build Include="dbo\Tables\ILLINOIS_POOLED_INCOME.sql" />
+    <Build Include="dbo\Tables\ILLINOIS_POOLED_INCOME_HIST.sql" />
+    <Build Include="dbo\Tables\INCIDENTAL_SYNDICATES.sql" />
+    <Build Include="dbo\Tables\INCOME_EXP_CODE_MAPPER.sql" />
+    <Build Include="dbo\Tables\KENTUCKY_JATF_ADVANCES.sql" />
+    <Build Include="dbo\Tables\KENTUCKY_JATF_ADVANCES_HIST.sql" />
+    <Build Include="dbo\Tables\KENTUCKY_POOLED_INCOME.sql" />
+    <Build Include="dbo\Tables\KENTUCKY_POOLED_INCOME_HIST.sql" />
+    <Build Include="dbo\Tables\KENTUCKY_TRUST_FUND.sql" />
+    <Build Include="dbo\Tables\KENTUCKY_TRUST_FUND_HIST.sql" />
+    <Build Include="dbo\Tables\MEMBER_TYPE.sql" />
+    <Build Include="dbo\Tables\MEMBERS.sql" />
+    <Build Include="dbo\Tables\MSL_MAPPER.sql" />
+    <Build Include="dbo\Tables\NON_LLOYDS_ENTITIES.sql" />
+    <Build Include="dbo\Tables\PARTNERSHIPS.sql" />
+    <Build Include="dbo\Tables\POST_INC_ILLINOIS_INCOME.sql" />
+    <Build Include="dbo\Tables\POST_INC_KENTUCKY_JATF.sql" />
+    <Build Include="dbo\Tables\POST_INC_KENTUCKY_TRUST.sql" />
+    <Build Include="dbo\Tables\POST_INC_QMA.sql" />
+    <Build Include="dbo\Tables\POST_INC_SIS.sql" />
+    <Build Include="dbo\Tables\POST_RITC_ILLINOIS_INCOME.sql" />
+    <Build Include="dbo\Tables\POST_RITC_KENTUCKY_JATF.sql" />
+    <Build Include="dbo\Tables\POST_RITC_KENTUCKY_TRUST.sql" />
+    <Build Include="dbo\Tables\POST_RITC_QMA.sql" />
+    <Build Include="dbo\Tables\POST_RITC_SIS.sql" />
+    <Build Include="dbo\Tables\QMA_1042_MAPPER.sql" />
+    <Build Include="dbo\Tables\RITC_MATRIX.sql" />
+    <Build Include="dbo\Tables\SLP_PARTNERS.sql" />
+    <Build Include="dbo\Tables\STG_ANALYSIS_1042.sql" />
+    <Build Include="dbo\Tables\STG_CORE_MARKET_RETURNS_QMA.sql" />
+    <Build Include="dbo\Tables\STG_CORE_MARKET_RETURNS_SIS.sql" />
+    <Build Include="dbo\Tables\STG_COUNTRY.sql" />
+    <Build Include="dbo\Tables\STG_DISTRIBUTION.sql" />
+    <Build Include="dbo\Tables\STG_DISTRIBUTION_MAPPER.sql" />
+    <Build Include="dbo\Tables\STG_EDF.sql" />
+    <Build Include="dbo\Tables\STG_EDF_MAPPER.sql" />
+    <Build Include="dbo\Tables\STG_ELECTORIAL_STATUS.sql" />
+    <Build Include="dbo\Tables\STG_ENTITY_TYPE.sql" />
+    <Build Include="dbo\Tables\STG_ILLINOIS_INCOME.sql" />
+    <Build Include="dbo\Tables\STG_ILLINOIS_POOLED_INCOME.sql" />
+    <Build Include="dbo\Tables\STG_INCIDENTAL_SYNDICATES.sql" />
+    <Build Include="dbo\Tables\STG_INCOME_EXP_CODE_MAPPER.sql" />
+    <Build Include="dbo\Tables\STG_KENTUCKY_JATF_ADVANCES.sql" />
+    <Build Include="dbo\Tables\STG_KENTUCKY_POOLED_INCOME.sql" />
+    <Build Include="dbo\Tables\STG_KENTUCKY_TRUST_FUND.sql" />
+    <Build Include="dbo\Tables\STG_MASTER_SYNDICATES.sql" />
+    <Build Include="dbo\Tables\STG_MEMBER_TYPE.sql" />
+    <Build Include="dbo\Tables\STG_MEMBERS.sql" />
+    <Build Include="dbo\Tables\STG_MS_CHARGES.sql" />
+    <Build Include="dbo\Tables\STG_NON_LLOYDS_ENTITIES.sql" />
+    <Build Include="dbo\Tables\STG_QMA_1042_MAPPER.sql" />
+    <Build Include="dbo\Tables\STG_RITC_MATRIX.sql" />
+    <Build Include="dbo\Tables\STG_SLP_PARTNERS.sql" />
+    <Build Include="dbo\Tables\STG_SYNDICATE_MEMBER.sql" />
+    <Build Include="dbo\Tables\STG_UNDER_WRITING_STATUS.sql" />
+    <Build Include="dbo\Tables\SYNDICATE_MEMBER.sql" />
+    <Build Include="dbo\Tables\SYNDICATES.sql" />
+    <Build Include="dbo\Tables\TAX_YEARS.sql" />
+    <Build Include="dbo\Tables\TREATY_NONTREATY_PERCENTAGES.sql" />
+    <Build Include="dbo\Tables\UNDER_WRITING_STATUS.sql" />
+    <Build Include="dbo\Tables\Y_LABLE.sql" />
+    <Build Include="ETL\Tables\Config_Content.sql" />
+    <Build Include="ETL\Tables\Config_DataPhase_DE.sql" />
+    <Build Include="ETL\Tables\Config_DataSet_DE.sql" />
+    <Build Include="ETL\Tables\Config_Status_DE.sql" />
+    <Build Include="ETL\Tables\Error_Details.sql" />
+    <Build Include="ETL\Tables\History_Error_Details.sql" />
+    <Build Include="ETL\Tables\History_RunTime_Content.sql" />
+    <Build Include="ETL\Tables\History_RunTime_DataPhaseStatus.sql" />
+    <Build Include="ETL\Tables\History_RunTime_DataSetStatus.sql" />
+    <Build Include="ETL\Tables\History_RunTime_DTTM.sql" />
+    <Build Include="ETL\Tables\History_RunTime_DTTM_DataSet.sql" />
+    <Build Include="ETL\Tables\RunTime_Content.sql" />
+    <Build Include="ETL\Tables\RunTime_DataPhaseStatus.sql" />
+    <Build Include="ETL\Tables\RunTime_DataSetStatus.sql" />
+    <Build Include="ETL\Tables\RunTime_DTTM.sql" />
+    <Build Include="ETL\Tables\RunTime_DTTM_DataSet.sql" />
+    <Build Include="Security\ETL_User.sql" />
+    <Build Include="Security\ETL_User_1.sql" />
+    <Build Include="dbo\Stored Procedures\GET_BMR_REPORT.sql" />
+    <Build Include="ETL\Stored Procedures\Aggregate_Core_Market_Returns_QMA.sql" />
+    <Build Include="ETL\Stored Procedures\Aggregate_Core_Market_Returns_SIS.sql" />
+    <Build Include="ETL\Stored Procedures\Aggregate_Illinois_Income.sql" />
+    <Build Include="ETL\Stored Procedures\Aggregate_Illinoise_Kentucky_I.sql" />
+    <Build Include="ETL\Stored Procedures\Aggregate_Illinoise_Kentucky_K.sql" />
+    <Build Include="ETL\Stored Procedures\Aggregate_Kentucky_JATF_Advances.sql" />
+    <Build Include="ETL\Stored Procedures\Aggregate_Kentucky_Trust_Fund.sql" />
+    <Build Include="ETL\Stored Procedures\Aggregate_Member_BMR.sql" />
+    <Build Include="ETL\Stored Procedures\Aggregate_Member_Exp.sql" />
+    <Build Include="ETL\Stored Procedures\Aggregate_QMA_1042.sql" />
+    <Build Include="ETL\Stored Procedures\Aggregate_Syndicate_Member_BMR.sql" />
+    <Build Include="ETL\Stored Procedures\Aggregate_Syndicate_Member_Exp.sql" />
+    <Build Include="ETL\Stored Procedures\Aggregate_Under_Write_Profit_Loss.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_ANALYSIS_1042.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_CORE_MARKET_RETURNS_QMA.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_CORE_MARKET_RETURNS_SIS.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_Country.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_DISTRIBUTION.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_DISTRIBUTION_MAPPER.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_EDF.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_EDF_MAPPER.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_ELECTORIAL_STATUS .sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_ENTITY_TYPE.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_ILLINOIS_INCOME.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_ILLINOIS_POOLED_INCOME.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_INCIDENTAL_SYNDICATES.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_INCOME_EXP_CODE_MAPPER.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_KENTUCKY_JATF_ADVANCES.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_KENTUCKY_POOLED_INCOME.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_KENTUCKY_TRUST_FUND.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_MASTER_SYNDICATES.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_MEMBER_TYPE.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_MEMBERS.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_MS_CHARGES.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_NON_LLOYDS_ENTITIES.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_QMA_1042_MAPPER.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_RITC_MATRIX.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_SLP_PARTNERS.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_SYNDICATE_MEMBER.sql" />
+    <Build Include="ETL\Stored Procedures\DeleteStage_UNDER_WRITING_STATUS.sql" />
+    <Build Include="ETL\Stored Procedures\Finalize_RunTime.sql" />
+    <Build Include="ETL\Stored Procedures\Finalize_RunTime_IndexConfiguration.sql" />
+    <Build Include="ETL\Stored Procedures\Finalize_RunTime_RunMode.sql" />
+    <Build Include="ETL\Stored Procedures\Get_RunTime_Content.sql" />
+    <Build Include="ETL\Stored Procedures\Get_RunTime_DataPhaseStatus.sql" />
+    <Build Include="ETL\Stored Procedures\Get_RunTime_DataPhaseStatus_IsExecutable.sql" />
+    <Build Include="ETL\Stored Procedures\Get_RunTime_DataSetStatus.sql" />
+    <Build Include="ETL\Stored Procedures\Get_RunTime_DataSetStatus_IsExecutable.sql" />
+    <Build Include="ETL\Stored Procedures\Get_RunTime_DTTM_DataSet.sql" />
+    <Build Include="ETL\Stored Procedures\Get_RunTime_PreviousErrors.sql" />
+    <Build Include="ETL\Stored Procedures\History_Finalize_RunTime.sql" />
+    <Build Include="ETL\Stored Procedures\History_Set_ETL_Error_Details.sql" />
+    <Build Include="ETL\Stored Procedures\History_Set_RunTime_Content.sql" />
+    <Build Include="ETL\Stored Procedures\History_Set_RunTime_DataPhaseStatus.sql" />
+    <Build Include="ETL\Stored Procedures\History_Set_RunTime_DataSetStatus.sql" />
+    <Build Include="ETL\Stored Procedures\History_Set_RunTime_DTTM.sql" />
+    <Build Include="ETL\Stored Procedures\History_Set_RunTime_DTTM_DataSet.sql" />
+    <Build Include="ETL\Stored Procedures\Initialize_DataPhaseStatus.sql" />
+    <Build Include="ETL\Stored Procedures\Initialize_DataSetStatus.sql" />
+    <Build Include="ETL\Stored Procedures\Initialize_ETLRun.sql" />
+    <Build Include="ETL\Stored Procedures\Initialize_RunTime.sql" />
+    <Build Include="ETL\Stored Procedures\Initialize_RunTime_IndexConfiguration.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Analysis_1042.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Base_Element_NID.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_BEN_INC_EXP_Code_Mapper.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Core_Market_Returns_QMA.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Core_Market_Returns_SIS.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Country.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Currency.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Distribution.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Distribution_Mapper.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_EDF.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_EDF_Mapper.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Electorial_Status.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Entity_Type.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_ILL_KEN_Treaty_NonTreaty_Per.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Illinois_Income.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Illinois_Pooled_Income.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Incidental_Syndicates.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Income_Exp_Code_Mapper.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Kentucky_JATF_Advances.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Kentucky_Pooled_Income.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Kentucky_Trust_Fund.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Member_Type.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Members.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_MSL_Mapper.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Non_Lloyds_Entities.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_QMA_1042_Mapper.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_RITC_Matrix.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_SLP_Partners.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Syndicate_Members.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Syndicates.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Treaty_NonTreaty_Percentages.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Under_Writing_Status.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_Y_Lable.sql" />
+    <Build Include="ETL\Stored Procedures\Set_RunTime_Content.sql" />
+    <Build Include="ETL\Stored Procedures\Set_RunTime_DataPhaseStatus.sql" />
+    <Build Include="ETL\Stored Procedures\Set_RunTime_DataSetStatus.sql" />
+    <Build Include="ETL\Stored Procedures\Set_RunTime_DTTM.sql" />
+    <Build Include="ETL\Stored Procedures\Set_RunTime_DTTM_DataSet.sql" />
+    <Build Include="ETL\Stored Procedures\Set_RunTime_Error_Details.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_ANALYSIS_1042.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_Core_Market_Returns_QMA.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_Core_Market_Returns_SIS.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_Country.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_Distribution.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_Distribution_Mapper.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_EDF.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_EDF_Mapper.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_Electorial_Status.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_Entity_Type.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_Illinois_Income.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_Illinois_Pooled_Income.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_Incidental_Syndicates.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_Income_Exp_Code_Mapper.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_Kentucky_JATF_Advances.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_Kentucky_Pooled_Income.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_Kentucky_Trust_Fund.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_Member_Type.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_Members.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_Non_Lloyds_Entities.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_QMA_1042_Mapper.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_RITC_Matrix.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_SLP_Partners.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_Syndicate_Members.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_Syndicates.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_Under_Writing_Status.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Analysis_1042.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Core_Market_Retruns_QMA.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Core_Market_Retruns_SIS.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Country.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Distribution.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Distribution_Mapper.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_EDF.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_EDF_Mapper.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Electorial_Status.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Entity_Type.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_ETLRun.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Illinois_Income.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Illinois_Pooled_Income.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Incidental_Syndicates.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Income_Exp_Code_Mapper.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Kentucky_JATF_Advances.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Kentucky_Pooled_Income.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Kentucky_Trust_Fund.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Member_Type.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Members.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Non_Lloyds_Entities.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_QMA_1042_Mapper.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_RITC_Matrix.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_SLP_Partners.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Syndicate_Members.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Syndicates.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_Under_Writing_Status.sql" />
+    <Build Include="Security\ETL.sql" />
+    <Build Include="dbo\Tables\MS_CHARGES.sql" />
+    <Build Include="dbo\Tables\MS_CHARGES_HIST.sql" />
+    <None Include="Scripts\ScriptsIgnoredOnImport.sql" />
+    <Build Include="ETL\Stored Procedures\Reconcile_MS_Charges.sql" />
+    <Build Include="ETL\Stored Procedures\Validate_MS_Charges.sql" />
+    <Build Include="ETL\Stored Procedures\TempIndex_MS_Charges.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LOL_TaxSys.publish.xml" />
+    <None Include="LOL_TaxSys_1.publish.xml" />
+    <None Include="LOL_TaxSys_2.publish.xml" />
+  </ItemGroup>
+</Project>
